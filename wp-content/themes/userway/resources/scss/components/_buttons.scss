@@ -1,0 +1,31 @@
+.btn {
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    max-width: 275px;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+.btn-video {
+  transition: transform 0.65s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  svg {
+    $size: 56px;
+    $size-md: 72px;
+
+    width: $size;
+    height: $size;
+
+    @include media-breakpoint-up(md) {
+      width: $size-md;
+      height: $size-md;
+    }
+  }
+}
